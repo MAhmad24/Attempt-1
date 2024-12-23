@@ -201,6 +201,53 @@ nav ul li a:hover::after{
     transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
+/* Style for all project cards including hidden ones */
+.project-card, .project-card.hidden {
+    background: rgba(38, 38, 38, 0.7);
+    padding: 40px;
+    border-radius: 10px;
+    transition: all 0.5s ease;
+    position: relative;
+    overflow: hidden;
+    backdrop-filter: blur(5px);
+    background-size: cover;
+    background-position: center;
+}
+
+/* Before pseudo-element for overlay */
+.project-card::before, .project-card.hidden::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(38, 38, 38, 0.7);
+    transition: opacity 0.5s ease;
+}
+
+/* Hover effects for all cards */
+.project-card:hover::before, .project-card.hidden:hover::before {
+    opacity: 0.3;
+}
+
+.project-card:hover, .project-card.hidden:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Hidden state specifics */
+.project-card.hidden {
+    display: none;
+    opacity: 0;
+}
+
+/* Show state for hidden cards */
+.project-card.hidden.show {
+    display: block;
+    opacity: 1;
+}
+
 .project-card::before {
     content: '';
     position: absolute;

@@ -182,7 +182,7 @@ nav ul li a:hover::after{
 
 .projects-list {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, minmax(400px, 1fr)); /* Increased from 350px to 400px */
     gap: 40px;
     margin-top: 50px;
     padding: 20px; /* Added padding to prevent cards from touching edges */
@@ -190,7 +190,7 @@ nav ul li a:hover::after{
 
 .project-card {
     background: rgba(38, 38, 38, 0.7); /* Semi-transparent background */
-    padding: 40px;
+    padding: 50px; /* Increased from 40px to 50px */
     border-radius: 10px;
     transition: all 0.5s ease;
     position: relative;
@@ -204,7 +204,7 @@ nav ul li a:hover::after{
 /* Style for all project cards including hidden ones */
 .project-card, .project-card.hidden {
     background: rgba(38, 38, 38, 0.7);
-    padding: 40px;
+    padding: 50px; /* Increased from 40px to 50px */
     border-radius: 10px;
     transition: all 0.5s ease;
     position: relative;
@@ -222,13 +222,13 @@ nav ul li a:hover::after{
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(38, 38, 38, 0.7);
+    background: rgba(0, 0, 0, 0.7); /* Darker base overlay */
     transition: opacity 0.5s ease;
 }
 
 /* Hover effects for all cards */
 .project-card:hover::before, .project-card.hidden:hover::before {
-    opacity: 0.3;
+    opacity: 0.85; /* Darker overlay on hover */
 }
 
 .project-card:hover, .project-card.hidden:hover {
@@ -246,17 +246,6 @@ nav ul li a:hover::after{
 .project-card.hidden.show {
     display: block;
     opacity: 1;
-}
-
-.project-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(38, 38, 38, 0.7);
-    transition: opacity 0.5s ease;
 }
 
 .project-card:nth-child(1) {
@@ -284,31 +273,20 @@ nav ul li a:hover::after{
     background-image: url('Images/Project6.jpg');
 }
 
-.project-card:hover::before {
-    opacity: 0.3;
-}
-
-.project-card:hover {
-    transform: translateY(-10px) scale(1.05);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
-
 .project-card::after {
     content: '';
     position: absolute;
     left: 0;
     right: 0;
-    bottom: 0;
-    height: 33%;
+    top: 0;
+    bottom: 0; /* Full height */
     background: linear-gradient(
         to top,
-        rgba(255, 0, 79, 1) 0%,
-        rgba(255, 0, 79, 0.9) 10%,
-        rgba(255, 0, 79, 0.7) 20%,
-        rgba(255, 0, 79, 0.5) 30%,
-        rgba(255, 0, 79, 0.3) 50%,
-        rgba(255, 0, 79, 0.1) 70%,
-        rgba(255, 0, 79, 0) 85%
+        rgba(255, 0, 79, 0.8) 0%,
+        rgba(255, 0, 79, 0.6) 30%,
+        rgba(255, 0, 79, 0.4) 60%,
+        rgba(255, 0, 79, 0.2) 80%,
+        rgba(255, 0, 79, 0) 100%
     );
     opacity: 0;
     transition: opacity 0.5s ease;
@@ -370,14 +348,15 @@ nav ul li a:hover::after{
     background: #b82500;
 }
 
-@media screen and (max-width: 1000px) {
+/* Update media queries for responsive design */
+@media screen and (max-width: 1400px) { /* Increased breakpoint */
     .projects-list {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, minmax(350px, 1fr));
     }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
     .projects-list {
-        grid-template-columns: 1fr;
+        grid-template-columns: minmax(300px, 1fr);
     }
 }

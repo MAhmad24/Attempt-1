@@ -396,7 +396,9 @@ nav ul li a:hover::after{
     transition: transform o.5s;
 }
 
+/* probably add more */
 .social-icons a:hover{
     color: #ff004f;
     transform: translateY(-5px);
-}
+} 
+

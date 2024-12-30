@@ -352,7 +352,7 @@ nav ul li a:hover::after{
 }
 
 .show-more-btn:hover {
-    background: #b82500;
+    background: #793aff;
 }
 
 @media screen and (max-width: 1000px) {
@@ -398,11 +398,14 @@ nav ul li a:hover::after{
 
 /* probably add more */
 .social-icons a:hover{
-    color: #ff004f;
+    color: #4f00ff;
     transform: translateY(-5px);
 } 
 
 .show-more-btn.btn2{
     display: inline-block;
     background: #4f00ff;
+}
+.show-more-btn.btn2:hover {
+    background: #793aff;
 }

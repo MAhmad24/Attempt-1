@@ -73,7 +73,7 @@ nav ul li a::after{
     content: '';
     width: 0;
     height: 3px;
-    background: #b82500;
+    background: #4f00ff;
     position: absolute;
     left: 0;
     bottom: -5px;
@@ -95,7 +95,7 @@ nav ul li a:hover::after{
 }
 
 .header-text h1 span{
-    color: #ff004f;
+    color: #6824ff;
 }
 /* ----------about-------- */
 #about{
@@ -140,7 +140,7 @@ nav ul li a:hover::after{
     content: '';
     width: 0;
     height: 3px;
-    background: #b82500;
+    background: #3300a3;
     position: absolute;
     left: 0;
     bottom: -8px;
@@ -161,7 +161,7 @@ nav ul li a:hover::after{
 }
 .tab-contents ul li span{
     font-size: 17px;
-    color: #B54769;
+    color: #6824ff;
 }
 .tab-contents{
     display: none;
@@ -289,11 +289,11 @@ nav ul li a:hover::after{
     bottom: 0; /* Full height */
     background: linear-gradient(
         to top,
-        rgba(255, 0, 79, 0.8) 0%,
-        rgba(255, 0, 79, 0.6) 30%,
-        rgba(255, 0, 79, 0.4) 60%,
-        rgba(255, 0, 79, 0.2) 80%,
-        rgba(255, 0, 79, 0) 100%
+        rgba(79, 0, 255, 0.8) 0%,
+        rgba(79, 0, 255, 0.6) 30%,
+        rgba(79, 0, 255, 0.4) 60%,
+        rgba(79, 0, 255, 0.2) 80%,
+        rgba(79, 0, 255, 0) 100%
     );
     opacity: 0;
     transition: opacity 0.5s ease;
@@ -341,7 +341,7 @@ nav ul li a:hover::after{
 }
 
 .show-more-btn {
-    background: #ff004f;
+    background: #4f00ff;
     padding: 14px 50px;
     border-radius: 6px;
     text-decoration: none;
@@ -402,3 +402,7 @@ nav ul li a:hover::after{
     transform: translateY(-5px);
 } 
 
+.show-more-btn.btn2{
+    display: inline-block;
+    background: #4f00ff;
+}
